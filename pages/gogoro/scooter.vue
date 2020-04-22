@@ -4,7 +4,8 @@
 
 <script>
 export default {
-  name: 'smartScooter'
+  name: 'smartScooter',
+  middleware: 'fetchScooters'
 }
 </script>
 
