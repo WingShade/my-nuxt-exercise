@@ -15,7 +15,7 @@ export default {
   data() {
     return {
       tabs: [
-        { name: 'Gogoro', path: '/' },
+        { name: 'Gogoro', path: '/gogoro/home' },
         { name: 'Smartscooter®', path: '/gogoro/scooter' },
         { name: 'Gogoro Network™', path: '/gogoro/network' },
         { name: '尋找門市', path: '/gogoro/shopAddress' },
