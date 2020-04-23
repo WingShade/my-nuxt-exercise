@@ -23,7 +23,8 @@
 <script>
 export default {
   name: 'shopAddress',
-  async asyncData({ $axios }) {
+  async asyncData({ $axios, ...context }) {
+    console.log('context', context)
     const list = await $axios.$get('https://webapi.gogoro.com/api/vm/list')
     return { list: list.slice(0, 30) } // 取前30筆demo
   },
