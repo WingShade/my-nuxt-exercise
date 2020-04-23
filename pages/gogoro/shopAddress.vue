@@ -10,12 +10,23 @@
     <br />
     <br />
     <input type="button" value="送出" @click="find" />
+    <br />
+    <br />
+    <div>
+      <div v-for="item in list" :key="item.Id">
+        {{ JSON.parse(item.LocName).List[1].Value }}
+      </div>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
   name: 'shopAddress',
+  async asyncData({ $axios }) {
+    const list = await $axios.$get('https://webapi.gogoro.com/api/vm/list')
+    return { list: list.slice(0, 30) } // 取前30筆demo
+  },
   data() {
     return {
       where: ''
