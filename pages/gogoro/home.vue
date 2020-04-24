@@ -30,6 +30,9 @@ export default {
   components: {
     Logo
   },
+  asyncData(context) {
+    context.app.myInjectedFunction('ctx!')
+  },
   mounted() {
     this.$myInjectedFunction('test')
   }
