@@ -29,6 +29,9 @@ export default {
   name: 'home',
   components: {
     Logo
+  },
+  mounted() {
+    this.$myInjectedFunction('test')
   }
 }
 </script>
